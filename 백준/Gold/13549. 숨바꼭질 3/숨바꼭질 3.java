@@ -30,7 +30,7 @@ public class Main {
 		System.out.println(ans);
 	}
 	static void sumba(int now, int depth) {
-		Queue<Node> q = new LinkedList<>();
+		Queue<Node> q = new ArrayDeque<>();
 		q.add(new Node(now, depth));
 		
 		while(!q.isEmpty()) {
