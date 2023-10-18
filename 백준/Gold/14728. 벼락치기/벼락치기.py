@@ -1,5 +1,5 @@
 import sys
-
+input = sys.stdin.readline
 N, T = map(int, input().split())
 DP = [0] * (T+1)
 for _ in range(N):
@@ -7,4 +7,6 @@ for _ in range(N):
     for i in range(T, -1, -1):
         if i >= K:
             DP[i] = max(DP[i], DP[i-K] + S)
+
+
 print(DP[T])
